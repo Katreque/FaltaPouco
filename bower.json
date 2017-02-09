@@ -1,0 +1,22 @@
+{
+  "name": "faltapouco",
+  "description": "Acompanhe o quanto falta para seu trabalho acabar com este software simples e inteligente.",
+  "main": "main.js",
+  "authors": [
+    "Katreque"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Katreque/FaltaPouco",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "angular-route": "^1.6.2"
+  }
+}
