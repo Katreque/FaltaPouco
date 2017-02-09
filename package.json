@@ -1,0 +1,22 @@
+{
+  "name": "faltapouco",
+  "version": "0.0.1",
+  "description": "Acompanhe o quanto falta para seu trabalho acabar com este software simples e inteligente.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Katreque/FaltaPouco.git"
+  },
+  "author": "Katreque",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Katreque/FaltaPouco/issues"
+  },
+  "homepage": "https://github.com/Katreque/FaltaPouco#readme"
+}
