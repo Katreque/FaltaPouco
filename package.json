@@ -2,11 +2,12 @@
   "name": "faltapouco",
   "version": "0.0.1",
   "description": "Acompanhe o quanto falta para seu trabalho acabar com este software simples e inteligente.",
-  "main": "index.js",
+  "main": "main.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

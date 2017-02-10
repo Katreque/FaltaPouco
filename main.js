@@ -1,19 +1,37 @@
-var faltaPouco = require('faltaPouco');
+const electron = require('electron');
+const app = electron.app;
 
-var BrowserWindow = require('browser-window');
-var mainWindow = null;
+const BrowserWindow = electron.BrowserWindow;
+const path = require('path');
+const url = require('url');
 
-faltaPouco.on('window-all-closed', function(){
-  if(process.plataform != 'darwin'){
-    faltaPouco.quit();
-  }
-});
+let mainWindow
 
-faltaPouco.on('ready', function(){
-  mainWindow = new BrowserWindow({ width: 800, height: 600});
-  mainWindow.loadUrl('file://' + __dirname +'/index.html');
+function createWindow () {
+  mainWindow = new BrowserWindow({width: 800, height: 600})
 
-  mainWindow.on('closed', function(){
-    mainWindow = null;
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  mainWindow.webContents.openDevTools()
+
+  mainWindow.on('closed', function () {
+    mainWindow = null
   })
+}
+app.on('ready', createWindow)
+
+app.on('window-all-closed', function () {
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
+})
+
+app.on('activate', function () {
+  if (mainWindow === null) {
+    createWindow()
+  }
 })
