@@ -22,6 +22,7 @@
   "homepage": "https://github.com/Katreque/FaltaPouco#readme",
   "devDependencies": {
     "bower": "^1.8.0",
+    "easytimer": "^1.1.1",
     "electron": "^1.4.15",
     "electron-prebuilt": "^1.4.13"
   }

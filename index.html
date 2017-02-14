@@ -4,11 +4,21 @@
     <base href="./">
     <meta charset="utf-8">
     <link rel="stylesheet" href="./app/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./app/bower_components/font-awesome/css/font-awesome.min.css">
     <title>Falta Pouco</title>
   </head>
   <body>
     <main>
       <div class="container">
+        <div class="col-md-2 pull-right">
+          <button type="button" class="btn btn-danger">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            Config
+          </button>
+        </div>
+      </div>
+      <div class="container">
+          <div>00:00:00:00</div>
       </div>
     </main>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -16,6 +26,7 @@
     <script type="text/javascript" src="./app/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="./app/bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="./app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./app/scripts/easytimer.min.js"></script>
     <script type="text/javascript" src="./app/scripts/app.js"></script>
     <script>if (window.module) module = window.module;</script>
   </body>
