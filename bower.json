@@ -18,5 +18,8 @@
   "dependencies": {
     "angular": "^1.6.2",
     "angular-route": "^1.6.2"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7"
   }
 }
