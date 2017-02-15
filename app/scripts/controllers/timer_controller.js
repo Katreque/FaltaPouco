@@ -3,6 +3,5 @@
 
   angular.module('FaltaPouco')
     .controller('controllerTimer', [function(){
-      
     }])
 }())
