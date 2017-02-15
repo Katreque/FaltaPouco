@@ -5,20 +5,24 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="./app/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./app/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./app/styles/position.css">
+    <link rel="stylesheet" href="./app/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <title>Falta Pouco</title>
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="container espacamento-top">
         <div class="col-md-2 pull-right">
-          <button type="button" class="btn btn-danger">
+          <button type="button" class="btn btn-default">
             <i class="fa fa-cog" aria-hidden="true"></i>
             Config
           </button>
         </div>
       </div>
-      <div class="container">
-          <div>00:00:00:00</div>
+      <div class="container espacamento-top-timer text-center">
+          <div class="timer">00:00:00:00</div>
+        <button type="button" class="btn btn-danger btn-large">Trabalhando!</button>
       </div>
     </main>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
