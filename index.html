@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Barrio" rel="stylesheet">
     <title>Falta Pouco</title>
   </head>
-  <body>
+  <body ng-controller="controllerTimer as ctrlTimer">
     <main>
       <div class="container espacamento-top">
         <div class="col-md-2 pull-right">
@@ -20,10 +20,10 @@
           </button>
         </div>
       </div>
-      <div id="chrono" class="container espacamento-top-timer text-center">
-          <h1>Falta Pouco</h1>
-          <div class="timer values">00:00:00:00</div>
-        <button id="initTimer" type="button" class="btn btn-danger btn-large">Trabalhando!</button>
+      <div class="container espacamento-top-timer text-center">
+          <div class="title">Falta Pouco</div>
+          <div id="timer" class="timer">00:00:00</div>
+        <button ng-click="ctrlTimer.triggerTimer()" type="button" class="btn btn-danger btn-large">Trabalhando!</button>
       </div>
     </main>
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -33,6 +33,7 @@
     <script type="text/javascript" src="./app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./app/scripts/easytimer.min.js"></script>
     <script type="text/javascript" src="./app/scripts/app.js"></script>
+    <script type="text/javascript" src="./app/scripts/controllers/timer_controller.js"></script>
     <script>if (window.module) module = window.module;</script>
   </body>
 </html>

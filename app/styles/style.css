@@ -2,3 +2,13 @@
   font-size: 100px;
   font-family: 'Barrio', cursive;
 }
+
+.title{
+  font-size: 40px;
+  color: #ff5252;
+  font-family: 'Barrio', cursive;
+}
+
+.btn-danger{
+  background-color: #ff5252;
+}
