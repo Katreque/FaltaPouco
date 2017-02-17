@@ -14,7 +14,7 @@
     <main>
       <div class="container espacamento-top">
         <div class="col-md-2 pull-right">
-          <button type="button" class="btn btn-default">
+          <button type="button" class="btn btn-default" ng-click="ctrlTimer.irConfig()">
             <i class="fa fa-cog" aria-hidden="true"></i>
             Config
           </button>
@@ -22,7 +22,7 @@
       </div>
       <div class="container espacamento-top-timer text-center">
           <div class="title">Falta Pouco</div>
-          <div id="timer" class="timer">00:00:00</div>
+          <div id="timer" class="timer" ng-bind="ctrlTimer.timerInit.valor"></div>
         <button ng-click="ctrlTimer.triggerTimer()" type="button" class="btn btn-danger btn-large">Trabalhando!</button>
       </div>
     </main>
@@ -33,7 +33,9 @@
     <script type="text/javascript" src="./app/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="./app/scripts/easytimer.min.js"></script>
     <script type="text/javascript" src="./app/scripts/app.js"></script>
+    <script type="text/javascript" src="./app/scripts/app.constant.js"></script>
     <script type="text/javascript" src="./app/scripts/controllers/timer_controller.js"></script>
+    <script type="text/javascript" src="./app/scripts/models/timer_model.js"></script>
     <script>if (window.module) module = window.module;</script>
   </body>
 </html>
