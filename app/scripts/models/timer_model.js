@@ -6,6 +6,7 @@
     class Timer{
       constructor(){
         this.valor = VALOR_INIT;
+        this.valorBtn = "Hora de trabalhar!";
       }
     }
     return Timer;

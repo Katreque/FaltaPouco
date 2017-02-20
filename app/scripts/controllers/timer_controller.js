@@ -13,9 +13,11 @@
       self.triggerTimer = function(){
         if(flag === 0){
           flag++;
+          self.timerInit.valorBtn = "Paradinha";
           return timer.start({countdown: true, startValues: {hours:parseInt(VALOR_INIT) }});
         }
         flag--;
+        self.timerInit.valorBtn = "Voltar ao trabalho";
         return timer.pause();
       }
 
@@ -26,9 +28,5 @@
       timer.addEventListener('started', function (e) {
         $('#timer').html(timer.getTimeValues().toString());
       });
-
-      this.irConfig = function(){
-        $location.path('/config');
-      }
     }])
 }())
