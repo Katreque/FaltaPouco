@@ -6,15 +6,16 @@
   const path = require('path');
 
   angular.module('FaltaPouco')
-    .controller('controllerConfig', ['VALOR_INIT', function(VALOR_INIT){
+    .controller('controllerConfig', ['VALOR_INIT', '$location', function(VALOR_INIT, $location){
         self = this;
 
-        var data;
-        var configPath = path.join(app.getPath('userData'), 'config.json');
+        var data = [{"horasDia":VALOR_INIT}];
+        var configPath = path.join(__dirname, 'config.json');
 
         self.atualizaConfig = function(){
-          console.log(configPath)
-          return fs.writeFileSync(configPath, 'Kappa');
+          fs.writeFile(configPath, data, (err) => {
+            if(err) throw err;
+          });
         }
     }])
 }())
