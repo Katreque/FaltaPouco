@@ -1,19 +1,23 @@
 (function(){
   'use strict'
 
-  const {app} = require('electron');
   const fs = require('fs');
   const path = require('path');
 
   angular.module('FaltaPouco')
-    .controller('controllerConfig', ['VALOR_INIT', '$location', function(VALOR_INIT, $location){
+    .controller('controllerConfig', ['VALOR_INIT', '$location', 'DIR_CONFIG', function(VALOR_INIT, $location, DIR_CONFIG){
         self = this;
 
-        var data = [{"horasDia":VALOR_INIT}];
-        var configPath = path.join(__dirname, 'config.json');
+        this.data = undefined;
+
+        var horaParse = function(string){
+          var parsed = string + ':00:00';
+          return parsed;
+        }
 
         self.atualizaConfig = function(){
-          fs.writeFile(configPath, data, (err) => {
+          var data = horaParse(this.data);
+          fs.writeFile(DIR_CONFIG, JSON.stringify(data), (err) => {
             if(err) throw err;
           });
         }
