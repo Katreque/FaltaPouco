@@ -12,6 +12,12 @@
 
         var horaParse = function(string){
           var parsed = string + ':00:00';
+          if(parseInt(parsed) < 10){
+            var parsed = '0' + parsed;
+            parsed = {"horaStart": parsed}
+            return parsed;
+          }
+          parsed = {"horaStart": parsed}
           return parsed;
         }
 

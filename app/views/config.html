@@ -7,15 +7,15 @@
                   <h4 class="modal-title">Configurações</h4>
                 </div>
                 <div class="modal-body">
-                  <div>
-                    <label>Horas de trabalho por dia</label>
-                  </div>
-                  <div>
-                    <input class="form-control" type="number" ng-model="ctrlConfig.data">
-                  </div>
+                  <form>
+                    <div class="form-group">
+                      <label>Horas de trabalho por dia</label>
+                      <input class="form-control" type="number" ng-model="ctrlConfig.data">
+                    </div>
+                  </form>
                 </div>
                 <div class="modal-footer">
-                  <button ng-click="ctrlConfig.atualizaConfig()" class="btn btn-danger">Salvar</button>
+                  <button ng-click="ctrlConfig.atualizaConfig()" class="btn btn-danger" data-dismiss="modal">Salvar</button>
                   <button class="btn btn-secundary" data-dismiss="modal">Fechar</button>
                 </div>
             </div>
